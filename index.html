@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I Love You 💕</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- PHASE 1: CMatrix Rain -->
+  <div id="phase1" class="phase active">
+    <canvas id="matrixCanvas"></canvas>
+    <div class="center-text" id="phase1Text"></div>
+  </div>
+
+  <!-- PHASE 2: Love Float + Photos -->
+  <div id="phase2" class="phase">
+    <canvas id="fireworksCanvas"></canvas>
+    <div class="floating-layer" id="floatLayer"></div>
+    <div class="photo-grid" id="photoGrid">
+      <div class="photo-item"><img src="oline.jpg" alt="Oline 1" /></div>
+      <div class="photo-item"><img src="oline2.jpg" alt="Oline 2" /></div>
+      <div class="photo-item"><img src="oline3.jpg" alt="Oline 3" /></div>
+      <div class="photo-item"><img src="oline4.jpg" alt="Oline 4" /></div>
+      <div class="photo-item"><img src="oline5.jpg" alt="Oline 5" /></div>
+      <div class="photo-item"><img src="oline6.jpg" alt="Oline 6" /></div>
+    </div>
+    <div class="scroll-hint">↓ scroll ↓</div>
+  </div>
+
+  <!-- PHASE 3: You Are The Best -->
+  <div id="phase3" class="phase">
+    <canvas id="finalFireworks"></canvas>
+    <div class="final-floating" id="finalFloat"></div>
+    <div class="final-message">
+      <div class="final-title" id="finalTitle">You Are The Best</div>
+      <div class="final-hearts" id="finalHearts">💕 💖 💗 💓 💞</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
