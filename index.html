@@ -1,41 +1,61 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>I Love You 💕</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-  <!-- PHASE 1: CMatrix Rain -->
+  <!-- PHASE 1: COUNTDOWN + LOVE RAIN -->
   <div id="phase1" class="phase active">
-    <canvas id="matrixCanvas"></canvas>
-    <div class="center-text" id="phase1Text"></div>
+    <canvas id="rainCanvas"></canvas>
+    <div id="countdown" class="countdown"></div>
   </div>
 
-  <!-- PHASE 2: Love Float + Photos -->
+  <!-- PHASE 2: I LOVE YOU + HEART SLIDESHOW -->
   <div id="phase2" class="phase">
-    <canvas id="fireworksCanvas"></canvas>
-    <div class="floating-layer" id="floatLayer"></div>
-    <div class="photo-grid" id="photoGrid">
-      <div class="photo-item"><img src="oline.jpg" alt="Oline 1" /></div>
-      <div class="photo-item"><img src="oline2.jpg" alt="Oline 2" /></div>
-      <div class="photo-item"><img src="oline3.jpg" alt="Oline 3" /></div>
-      <div class="photo-item"><img src="oline4.jpg" alt="Oline 4" /></div>
-      <div class="photo-item"><img src="oline5.jpg" alt="Oline 5" /></div>
-      <div class="photo-item"><img src="oline6.jpg" alt="Oline 6" /></div>
+    <canvas id="fwCanvas"></canvas>
+    <div class="float-layer" id="floatLayer2"></div>
+
+    <!-- SVG heart clip hidden -->
+    <svg width="0" height="0" style="position:absolute">
+      <defs>
+        <clipPath id="heartClip" clipPathUnits="objectBoundingBox">
+          <!-- normalized 0-1 heart path -->
+          <path d="M0.5,0.25
+            C0.5,0.1 0.35,0 0.25,0.07
+            C0.1,0.15 0,0.3 0,0.47
+            C0,0.72 0.25,0.87 0.5,1
+            C0.75,0.87 1,0.72 1,0.47
+            C1,0.3 0.9,0.15 0.75,0.07
+            C0.65,0 0.5,0.1 0.5,0.25 Z"/>
+        </clipPath>
+      </defs>
+    </svg>
+
+    <div class="heart-wrap">
+      <div class="heart-clip-box" id="heartBox">
+        <img class="heart-photo active" src="oline.jpg"  alt=""/>
+        <img class="heart-photo"        src="oline2.jpg" alt=""/>
+        <img class="heart-photo"        src="oline3.jpg" alt=""/>
+        <img class="heart-photo"        src="oline4.jpg" alt=""/>
+        <img class="heart-photo"        src="oline5.jpg" alt=""/>
+        <img class="heart-photo"        src="oline6.jpg" alt=""/>
+      </div>
     </div>
-    <div class="scroll-hint">↓ scroll ↓</div>
+
+    <div class="iloveyou-text">I Love You 💕</div>
   </div>
 
-  <!-- PHASE 3: You Are The Best -->
+  <!-- PHASE 3: YOU ARE THE BEST -->
   <div id="phase3" class="phase">
-    <canvas id="finalFireworks"></canvas>
-    <div class="final-floating" id="finalFloat"></div>
-    <div class="final-message">
-      <div class="final-title" id="finalTitle">You Are The Best</div>
-      <div class="final-hearts" id="finalHearts">💕 💖 💗 💓 💞</div>
+    <canvas id="finalCanvas"></canvas>
+    <div class="float-layer" id="floatLayer3"></div>
+    <div class="final-wrap">
+      <div class="final-title">You Are The Best</div>
+      <div class="final-hearts">💕 💖 💗 💓 💞</div>
     </div>
   </div>
 
